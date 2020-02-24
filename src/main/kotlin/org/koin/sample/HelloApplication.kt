@@ -11,9 +11,9 @@ import io.ktor.routing.routing
 import io.ktor.server.engine.commandLineEnvironment
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
-import org.koin.Logger.slf4jLogger
 import org.koin.ktor.ext.Koin
 import org.koin.ktor.ext.inject
+import org.koin.logger.slf4jLogger
 
 fun main(args: Array<String>) {
     // Start Ktor

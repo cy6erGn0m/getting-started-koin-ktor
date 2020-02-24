@@ -16,7 +16,7 @@ class ApplicationJobRoutesTest : AutoCloseKoinTest() {
     fun testHelloRequest() = withTestApplication(Application::main) {
         with(handleRequest(HttpMethod.Get, "/hello")) {
             assertEquals(HttpStatusCode.OK, response.status())
-            assertEquals("Hello Ktor & Koin !", response.content)
+            assertEquals("Hello Ktor & Koin!", response.content)
         }
 
         with(handleRequest(HttpMethod.Get, "/index.html")) {

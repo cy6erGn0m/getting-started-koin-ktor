@@ -1,16 +1,19 @@
-apply from: "versions.gradle"
-
-apply plugin: 'kotlin'
 
 buildscript {
     apply from: "versions.gradle"
     repositories {
+        mavenLocal()
         jcenter()
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.koin:koin-gradle-plugin:$koin_version"
     }
 }
+
+apply from: "versions.gradle"
+apply plugin: 'kotlin'
+apply plugin: 'koin'
 
 group 'org.koin.sample.ktor'
 version '1.0-SNAPSHOT'
